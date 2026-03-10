@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <div className={`fixed w-full z-50 transition-all duration-300 flex justify-center px-4 md:px-6 ${scrolled ? "top-3" : "top-8"}`}>
-      <nav className="relative w-full max-w-5xl bg-background/50 dark:bg-black/40 backdrop-blur-2xl border border-black/5 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-full pl-6 pr-3 py-2.5 flex items-center justify-between">
+      <nav className="relative w-full max-w-5xl bg-background/50 dark:bg-black/30 backdrop-blur-xl md:backdrop-blur-2xl border border-black/5 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-full pl-6 pr-3 py-2.5 flex items-center justify-between">
 
         {/* Logo */}
         <Link href="/" className="flex flex-col group py-1">
@@ -126,9 +126,9 @@ export default function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="md:hidden absolute top-[calc(100%+0.75rem)] left-0 w-full bg-background/90 dark:bg-[#0a0a0a]/90 backdrop-blur-3xl border border-black/10 dark:border-white/10 shadow-2xl rounded-3xl overflow-hidden z-50 p-2"
+              className="md:hidden absolute top-[calc(100%+0.75rem)] left-0 w-full bg-background/40 dark:bg-[#0a0a0a]/50 backdrop-blur-3xl border border-black/10 dark:border-white/10 shadow-2xl rounded-3xl overflow-hidden z-50 p-2"
             >
-              <div className="bg-background/80 dark:bg-white/5 rounded-2xl flex flex-col gap-1 p-3">
+              <div className="bg-background/20 dark:bg-white/5 rounded-2xl flex flex-col gap-1 p-3">
                 {navLinks.map((link) => {
                   const Icon = link.icon;
                   const isExactActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/');
